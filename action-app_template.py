@@ -33,7 +33,7 @@ class Greetings(object):
         print(coming_intent)
         if(coming_intent == 'imbored:hello'):
             hermes.publish_end_session(intent_message.session_id, "")
-            hermes.publish_start_session_notification("Hello human.")
+            hermes.publish_start_session_notification(intent_message.site_id, "Hello human.", "")
 
     # --> Register callback function and start MQTT
     def start_blocking(self):
