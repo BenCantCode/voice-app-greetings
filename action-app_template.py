@@ -31,7 +31,7 @@ class Greetings(object):
     def master_intent_callback(self, hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
         print(coming_intent)
-        if(coming_intent == 'imbored:greetings'):
+        if(coming_intent == 'imbored:hello'):
             hermes.publish_end_session(intent_message.session_id, "")
             hermes.publish_start_session_notification("Hello human.")
 
